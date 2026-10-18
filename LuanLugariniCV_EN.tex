@@ -1,0 +1,78 @@
+\documentclass[11pt,a4paper,sans]{moderncv}
+
+% ----- MODERNCV SETUP -----
+\moderncvstyle{classic}
+\moderncvcolor{blue}
+
+% ----- PACKAGES -----
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[scale=0.84,top=1.2cm,bottom=1.2cm]{geometry}
+\usepackage{lmodern}
+
+% ----- PERSONAL DATA -----
+\name{Luan Alfredo}{Lugarini}
+\title{Computer Engineering Student}
+\address{Curitiba}{Paraná, Brazil}
+% \phone[mobile]{+55 (41) 9XXXX-XXXX}  % uncomment for the version sent by e-mail
+\email{luanlugarini@gmail.com}
+\social[github]{Luan1357}
+\extrainfo{\href{http://lattes.cnpq.br/4564643932699945}{Lattes CV}}
+
+\begin{document}
+
+\makecvtitle
+
+% ----- SUMMARY -----
+\small{Fourth-semester Computer Engineering student at PUCPR seeking an engineering internship. Academic projects in systems programming in C (dynamic memory allocation, binary file parsing), Python and robotics (LEGO SPIKE and Arduino), including a robotic arm I assembled and programmed on my own. Advanced English (C1).}
+\vspace{4pt}
+
+% ----- EDUCATION -----
+\section{Education}
+\cventry{2025 -- 2029}{B.S. in Computer Engineering}{Pontifical Catholic University of Paraná (PUCPR)}{Curitiba, Brazil}{4th semester, expected graduation 2029}{}
+\cventry{2021 -- 2023}{High School}{Colégio Imaculada Conceição}{}{}{}
+
+% ----- PROJECTS -----
+\section{Academic Projects}
+\cventry{2025}{MyArm Robotic Arm: Tower of Hanoi}{Principles of Robotics, PUCPR}{C++ / Arduino}{}{
+\begin{itemize}
+    \item Assembled on my own a 4-degree-of-freedom robotic arm (base, two joints and gripper) driven by servo motors and an Arduino.
+    \item Programmed the motion sequence that physically solves the Tower of Hanoi puzzle, with servo speed control for smooth movement.
+    \item Code and video: \href{https://github.com/Luan1357/myarm-torre-de-hanoi}{github.com/Luan1357/myarm-torre-de-hanoi}
+\end{itemize}}
+\cventry{2025}{Autonomous Maze-Solving Robot}{Principles of Robotics, PUCPR}{Python / LEGO SPIKE}{}{
+\begin{itemize}
+    \item Robot that navigates a physical maze unassisted, using a distance sensor (walls), a color sensor (floor markers) and a gyroscope (90° and 180° turns with angle correction).
+    \item Logic built as a state machine (outbound, return, finish) using asynchronous programming.
+    \item \href{https://github.com/Luan1357/robo-labirinto-lego}{github.com/Luan1357/robo-labirinto-lego}
+\end{itemize}}
+\cventry{2026}{Conway's Game of Life}{Imperative Programming, PUCPR}{C}{}{
+\begin{itemize}
+    \item Cellular automaton simulator with a dynamically allocated grid (\texttt{malloc}/\texttt{calloc}), initial state loaded from file, and dead borders.
+    \item Double buffering with pointer swapping between generations, avoiding data copies and incorrect in-place updates.
+    \item \href{https://github.com/Luan1357/jogo-da-vida-conway}{github.com/Luan1357/jogo-da-vida-conway}
+\end{itemize}}
+\cventry{2026}{ppm2ascii: Image to ASCII Art Converter}{Imperative Programming, PUCPR}{C}{}{
+\begin{itemize}
+    \item Full parsing and validation of binary PPM (P6) images, supporting 8 and 16 bits per channel, with overflow checks before allocation.
+    \item Per-pixel luminance calculation mapped onto a 57-character ramp.
+    \item \href{https://github.com/Luan1357/ppm2ascii}{github.com/Luan1357/ppm2ascii}
+\end{itemize}}
+\cventry{2026}{15 Puzzle}{Imperative Programming, PUCPR}{Python}{}{
+\begin{itemize}
+    \item 4x4 sliding puzzle in the terminal, with a shuffle that always produces a solvable board and an auto-solver that replays the move history as a stack.
+    \item \href{https://github.com/Luan1357/jogo-dos-15}{github.com/Luan1357/jogo-dos-15}
+\end{itemize}}
+
+% ----- SKILLS -----
+\section{Technical Skills}
+\cvitem{Languages}{C, Python, C++ (Arduino)}
+\cvitem{Hardware}{Arduino, servo motors, LEGO SPIKE (distance, color and gyro sensors)}
+\cvitem{Tools}{Git, GitHub, VS Code}
+
+% ----- LANGUAGES -----
+\section{Languages}
+\cvitem{Portuguese}{Native}
+\cvitem{English}{Advanced (C1), certified by Wise Up}
+
+\end{document}
