@@ -7,7 +7,7 @@
 % ----- PACOTES -----
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[scale=0.84,top=1.2cm,bottom=1.2cm]{geometry}
+\usepackage[scale=0.87,top=0.9cm,bottom=0.9cm]{geometry}
 \usepackage{lmodern}
 
 % ----- DADOS PESSOAIS -----
@@ -24,7 +24,7 @@
 \makecvtitle
 
 % ----- RESUMO -----
-\small{Estudante do 4º período de Engenharia de Computação na PUCPR, em busca de estágio em engenharia. Tenho projetos acadêmicos em programação de sistemas em C (alocação dinâmica de memória, leitura de arquivos binários), Python e robótica (LEGO SPIKE e Arduino), incluindo um braço robótico montado e programado individualmente. Inglês avançado (C1).}
+\small{Estudante do 4º período de Engenharia de Computação na PUCPR, em busca de estágio em engenharia. Desenvolvi e mantenho sistemas web usados no dia a dia de dois negócios da família (Next.js, TypeScript e Supabase). Na faculdade, tenho projetos em C, Python e robótica (Arduino e LEGO SPIKE). Inglês avançado (C1).}
 \vspace{4pt}
 
 % ----- FORMACAO -----
@@ -32,47 +32,54 @@
 \cventry{2025 -- 2029}{Bacharelado em Engenharia de Computação}{Pontifícia Universidade Católica do Paraná (PUCPR)}{Curitiba, PR}{4º período, conclusão prevista para 2029}{}
 \cventry{2021 -- 2023}{Ensino Médio}{Colégio Imaculada Conceição}{}{}{}
 
+% ----- EXPERIENCIA -----
+\section{Experiência}
+\cventry{2026 -- atual}{Desenvolvedor Full-Stack}{Madeireira Lugarini (negócio da família)}{Campo Magro, PR}{}{
+\begin{itemize}
+    \item Criei o aplicativo de orçamentos e pedidos (PWA) usado no dia a dia pela empresa: cálculo de preço por volume de madeira, pagamentos parcelados, geração de PDF e envio do orçamento por WhatsApp.
+    \item Stack: Next.js 14, TypeScript, Tailwind, Supabase (PostgreSQL, autenticação e RLS) e deploy na Vercel.
+    \item Melhorias de confiabilidade e desempenho: registro de pagamento atômico no banco (função RPC) para evitar lançamento duplicado e redução de 36 a 41\% no bundle com importação dinâmica da biblioteca de PDF.
+    \item Reestruturei o site institucional (\href{https://madeiraslugarini.com.br}{madeiraslugarini.com.br}) em HTML, CSS e JavaScript, incluindo uma página nova de catálogo.
+\end{itemize}}
+\cventry{2026 -- atual}{Desenvolvedor Full-Stack}{Motel Grand Place (negócio da família)}{Curitiba, PR}{}{
+\begin{itemize}
+    \item Substituí a planilha de fechamento financeiro por um sistema web usado pelo proprietário no celular e no computador: lançamentos diários em grade editável, pagamentos de funcionários e fechamento mensal.
+    \item Next.js 14 e Supabase, com políticas de acesso no banco (RLS) e importação dos dados históricos da planilha.
+\end{itemize}}
+
 % ----- PROJETOS -----
 \section{Projetos Acadêmicos}
-\cventry{2025}{Braço Robótico MyArm: Torre de Hanói}{Princípios de Robótica, PUCPR}{C++ / Arduino}{}{
+\cventry{2025}{Braço Robótico MyArm: Torre de Hanói}{Princípios de Robótica, PUCPR}{C++ / Arduino \textperiodcentered{} \href{https://github.com/Luan1357/myarm-torre-de-hanoi}{GitHub}}{}{
 \begin{itemize}
     \item Montei individualmente um braço robótico de 4 graus de liberdade (base, duas juntas e garra) controlado por servomotores e Arduino.
     \item Programei a sequência de movimentos que resolve fisicamente o jogo Torre de Hanói, com controle de velocidade dos servos para movimentos suaves.
-    \item Código e vídeo: \href{https://github.com/Luan1357/myarm-torre-de-hanoi}{github.com/Luan1357/myarm-torre-de-hanoi}
 \end{itemize}}
-\cventry{2025}{Robô Autônomo para Labirinto}{Princípios de Robótica, PUCPR}{Python / LEGO SPIKE}{}{
+\cventry{2025}{Robô Autônomo para Labirinto}{Princípios de Robótica, PUCPR}{Python / LEGO SPIKE \textperiodcentered{} \href{https://github.com/Luan1357/robo-labirinto-lego}{GitHub}}{}{
 \begin{itemize}
     \item Robô que percorre um labirinto físico sem intervenção, usando sensor de distância (paredes), sensor de cor (marcadores no chão) e giroscópio (curvas de 90° e 180° com correção de ângulo).
     \item Lógica organizada em máquina de estados (ida, volta e fim), com programação assíncrona.
-    \item \href{https://github.com/Luan1357/robo-labirinto-lego}{github.com/Luan1357/robo-labirinto-lego}
 \end{itemize}}
-\cventry{2026}{Jogo da Vida de Conway}{Programação Imperativa, PUCPR}{C}{}{
+\cventry{2026}{Jogo da Vida de Conway}{Programação Imperativa, PUCPR}{C \textperiodcentered{} \href{https://github.com/Luan1357/jogo-da-vida-conway}{GitHub}}{}{
 \begin{itemize}
     \item Simulador do autômato celular com matriz alocada dinamicamente (\texttt{malloc}/\texttt{calloc}), leitura do estado inicial de arquivo e borda morta.
     \item Double buffering com troca de ponteiros entre gerações, evitando cópia de dados e atualização incorreta \emph{in-place}.
-    \item \href{https://github.com/Luan1357/jogo-da-vida-conway}{github.com/Luan1357/jogo-da-vida-conway}
 \end{itemize}}
-\cventry{2026}{ppm2ascii: Conversor de Imagem para ASCII Art}{Programação Imperativa, PUCPR}{C}{}{
+\cventry{2026}{ppm2ascii: Conversor de Imagem para ASCII Art}{Programação Imperativa, PUCPR}{C \textperiodcentered{} \href{https://github.com/Luan1357/ppm2ascii}{GitHub}}{}{
 \begin{itemize}
     \item Leitura e validação completa de imagens PPM binárias (P6), com suporte a 8 e 16 bits por canal e verificação de overflow antes da alocação.
     \item Cálculo de luminância por pixel e mapeamento para uma rampa de 57 caracteres.
-    \item \href{https://github.com/Luan1357/ppm2ascii}{github.com/Luan1357/ppm2ascii}
 \end{itemize}}
-\cventry{2026}{Jogo dos 15}{Programação Imperativa, PUCPR}{Python}{}{
+\cventry{2026}{Jogo dos 15}{Programação Imperativa, PUCPR}{Python \textperiodcentered{} \href{https://github.com/Luan1357/jogo-dos-15}{GitHub}}{}{
 \begin{itemize}
     \item Quebra-cabeça deslizante 4x4 no terminal, com embaralhamento que sempre gera um tabuleiro solucionável e resolução automática usando o histórico de jogadas como pilha.
-    \item \href{https://github.com/Luan1357/jogo-dos-15}{github.com/Luan1357/jogo-dos-15}
 \end{itemize}}
 
 % ----- HABILIDADES -----
-\section{Habilidades Técnicas}
-\cvitem{Linguagens}{C, Python, C++ (Arduino)}
-\cvitem{Hardware}{Arduino, servomotores, LEGO SPIKE (sensores de distância, cor e giroscópio)}
-\cvitem{Ferramentas}{Git, GitHub, VS Code}
+\section{Habilidades e Idiomas}
+\cvitem{Linguagens}{TypeScript, JavaScript, C, Python, C++ (Arduino), SQL, HTML/CSS}
+\cvitem{Web}{Next.js, React, Tailwind, Supabase (PostgreSQL), Vercel}
+\cvitem{Ferramentas}{Git, GitHub, VS Code, Arduino (servomotores), LEGO SPIKE (sensores de distância, cor e giroscópio)}
+\cvitem{Idiomas}{Português nativo; inglês avançado (C1), certificado pela Wise Up}
 
-% ----- IDIOMAS -----
-\section{Idiomas}
-\cvitem{Português}{Nativo}
-\cvitem{Inglês}{Avançado (C1), certificado pela Wise Up}
 
 \end{document}
